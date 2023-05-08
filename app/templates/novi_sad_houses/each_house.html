@@ -1,0 +1,126 @@
+{% extends "main.html" %}
+{% block content %}
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">info@example.com</a>
+        <i class="bi bi-phone-fill phone-icon"></i> +1 5589 55488 55
+      </div>
+      <div class="social-links d-none d-md-block">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href=""></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="main_old.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="getstarted scrollto" href="/">На главную страницу</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Адрес: {{ data.title }}</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- ======= Hero1 Section ======= -->
+          <section id="hero">
+            <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+              <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <div class="carousel-container">
+                    <div class="container">
+                      <a href=" {{ data.images.0.adDetails.1920x1080_fit_0_webp }} " ><img class="d-block w-100" src="{{ data.images.0.adDetails.730x396_fill_0_webp }}"></a>
+                    </div>
+                  </div>
+                </div>
+                {% for d in data.images %}
+                <!-- Slide 1 -->
+                  {% if d != data.images.0 %}
+                  <div class="carousel-item">
+                    <div class="carousel-container">
+                      <div class="container">
+                        <a href="{{ d.adDetails.1920x1080_fit_0_webp }}" ><img class="d-block w-100" src="{{ d.adDetails.730x396_fill_0_webp }}"></a>
+                      </div>
+                    </div>
+                  </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+
+              <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+              </a>
+
+              <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+              </a>
+
+            </div>
+          </section><!-- End Hero1 -->
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h2>Информация о доме:</h2>
+              <br>
+                  <ul>
+                    <li><h4><strong>Адрес</strong>: {{ data.title }}</h4></li>
+                    <li><h4><strong>Цена</strong>: {{ data.price }} €</h4></li>
+                    <li><h4><strong>Площадь</strong>: {{ data.m2 }} м²</h4></li>
+                    <li><h4><strong>Количество комнат</strong>:
+                      {% if data.roomCount %}
+                        {{ data.roomCount }}
+                      {% else %}
+                        данные отсутствуют :(
+                      {% endif %}
+                    </h4></li>
+                    <li><h4><strong>Структура</strong>: {{ data.structureName }}</h4></li>
+                  </ul>
+            </div>
+          </div>
+          <h2>Описание дома:</h2>
+            <p>
+              {{ data.desc }}
+            </p>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+{% endblock content %}
+
