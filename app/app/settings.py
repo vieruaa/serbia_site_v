@@ -115,10 +115,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+path = os.path.abspath(os.curdir)
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'templates/static/assets'),
-    'C:/Users/drear/PycharmProjects/serbia_site_v/app/templates/static/assets/'
+    f'{path}/templates/static/assets/'
 ]
 
 STATIC_URL = '/static/'
