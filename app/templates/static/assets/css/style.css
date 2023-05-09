@@ -1672,11 +1672,15 @@ section {
     border: 1px solid #673AB7 !important;
 }
 
+.page-link.active {
+    background-color: #673ab7;
+    color: #fff !important;
+}
 
 .page-link:hover {
     z-index: 2;
     color: #fff !important;
-    background-color: #673ab7;
+    background-color: #ffc451;
     border-color: #024dbc;
 }
 

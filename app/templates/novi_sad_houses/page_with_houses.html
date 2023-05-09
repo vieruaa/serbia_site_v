@@ -80,18 +80,66 @@
 
               <nav aria-label="Page navigation example">
                 <ul class="pagination">
+                  {% if request.get_full_path == '/ns_houses/1/16' %}
+                  <li class="page-item"><a class="page-link active" href="/ns_houses/1/16">1</a></li>
+                  {% else %}
                   <li class="page-item"><a class="page-link" href="/ns_houses/1/16">1</a></li>
+                  {% endif %}
+                  {% if request.get_full_path == '/ns_houses/16/31' %}
+                  <li class="page-item"><a class="page-link active" href="/ns_houses/16/31">2</a></li>
+                  {% else %}
                   <li class="page-item"><a class="page-link" href="/ns_houses/16/31">2</a></li>
+                  {% endif %}
+                  {% if request.get_full_path == '/ns_houses/31/46' %}
+                  <li class="page-item"><a class="page-link active" href="/ns_houses/31/46">3</a></li>
+                  {% else %}
                   <li class="page-item"><a class="page-link" href="/ns_houses/31/46">3</a></li>
+                  {% endif %}
+                  {% if request.get_full_path == '/ns_houses/46/61' %}
+                  <li class="page-item"><a class="page-link active" href="/ns_houses/46/61">4</a></li>
+                  {% else %}
                   <li class="page-item"><a class="page-link" href="/ns_houses/46/61">4</a></li>
+                  {% endif %}
+                  {% if request.get_full_path == '/ns_houses/61/76' %}
+                  <li class="page-item"><a class="page-link active" href="/ns_houses/61/76">5</a></li>
+                  {% else %}
                   <li class="page-item"><a class="page-link" href="/ns_houses/61/76">5</a></li>
+                  {% endif %}
+                  {% if request.get_full_path == '/ns_houses/76/91' %}
+                  <li class="page-item"><a class="page-link active" href="/ns_houses/76/91">6</a></li>
+                  {% else %}
                   <li class="page-item"><a class="page-link" href="/ns_houses/76/91">6</a></li>
+                  {% endif %}
+                  {% if request.get_full_path == '/ns_houses/91/106' %}
+                  <li class="page-item"><a class="page-link active" href="/ns_houses/91/106">7</a></li>
+                  {% else %}
                   <li class="page-item"><a class="page-link" href="/ns_houses/91/106">7</a></li>
+                  {% endif %}
+                  {% if request.get_full_path == '/ns_houses/106/121' %}
+                  <li class="page-item"><a class="page-link active" href="/ns_houses/106/121">8</a></li>
+                  {% else %}
                   <li class="page-item"><a class="page-link" href="/ns_houses/106/121">8</a></li>
+                  {% endif %}
+                  {% if request.get_full_path == '/ns_houses/121/136' %}
+                  <li class="page-item"><a class="page-link active" href="/ns_houses/121/136">9</a></li>
+                  {% else %}
                   <li class="page-item"><a class="page-link" href="/ns_houses/121/136">9</a></li>
+                  {% endif %}
+                  {% if request.get_full_path == '/ns_houses/136/151' %}
+                  <li class="page-item"><a class="page-link active" href="/ns_houses/136/151">10</a></li>
+                  {% else %}
                   <li class="page-item"><a class="page-link" href="/ns_houses/136/151">10</a></li>
+                  {% endif %}
+                  {% if request.get_full_path == '/ns_houses/151/166' %}
+                  <li class="page-item"><a class="page-link active" href="/ns_houses/151/166">11</a></li>
+                  {% else %}
                   <li class="page-item"><a class="page-link" href="/ns_houses/151/166">11</a></li>
+                  {% endif %}
+                  {% if request.get_full_path == '/ns_houses/166/181' %}
+                  <li class="page-item"><a class="page-link active" href="/ns_houses/166/181">12</a></li>
+                  {% else %}
                   <li class="page-item"><a class="page-link" href="/ns_houses/166/181">12</a></li>
+                  {% endif %}
                 </ul>
 
               </nav>
