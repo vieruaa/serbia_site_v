@@ -1,5 +1,7 @@
 import json
 import requests
+import shutil
+import os
 
 from googletrans import Translator
 
@@ -18,6 +20,12 @@ def get_json(url):
     src = r.json()
     return src
 
+
+# проверяем на наличие директории json, если она уже есть, удаляем директорию и ее содержимое
+if os.path.exists('templates/static/assets/json'):
+    shutil.rmtree('templates/static/assets/json')
+# создаем новую пустую директорию json
+os.makedirs('templates/static/assets/json')
 
 translator = Translator()
 
